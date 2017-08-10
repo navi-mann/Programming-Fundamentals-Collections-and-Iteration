@@ -1,0 +1,5 @@
+fav_colours = ["pink","purple","yellow","orange"]
+age = [29,27,36,28]
+coin_flip = [tails,tails,tails,heads,heads]
+artists = ["Beyonce", "Kanye", "Adele"]
+fav_colours2 = [:pink,:purple,:yellow,:orange]

@@ -8,7 +8,7 @@ dictonary = {cunt:"a woman's genitals.",fleek: "To shit on ones education and pu
 
 movie_info = { pulp_fiction:"1994",aladdin:"1992",mission_impossible:"1996"}
 
-population = {London:"8.7 million", Toronto:"2.8 million", Bombay: "20.7 million"}
+population = {London:8.7, Toronto:2.8, Bombay: 20.7}
 
 family = {aman:36,kavita:24,preeti:28,omeet:21}
 #
@@ -25,7 +25,7 @@ family = {aman:36,kavita:24,preeti:28,omeet:21}
 #
 # puts fav_colours[-1]
 #
-# population[:new_york] = "8.5 million"
+# population[:new_york] = 8.5
 # puts population
 #
 # puts coin_flip.reverse
@@ -48,20 +48,38 @@ family = {aman:36,kavita:24,preeti:28,omeet:21}
 #
 # puts movie_info
 
-family.each do |name,age|
-  p "#{name if age < 30}"
-end
+# family.each do |name,age|
+#   p "#{name if age < 30}"
+# end
+#
+# family.each { |name,age|
+#   puts name if age == family.values.max
+# }
+#
+# puts coin_flip.count("heads")
+#
+# performing_artists.delete("Adele")
+#
+# puts performing_artists
+#
+# population[:Toronto] = 50
+#
+# puts population
+
+puts population.values.reduce(:+)
 
 family.each { |name,age|
-  puts name if age == family.values.max
+  puts "#{name} is old" if age == family.values.max
+    puts "#{name} is young" if age == family.values.min
 }
 
-puts coin_flip.count("heads")
+puts fav_colours[-2..-1]
 
-performing_artists.delete("Adele")
+family.each { |name,age|
+   family[name] += 1
+}
+p family
 
-puts performing_artists
+fav_colours.insert(4, "black","red")
 
-population[:Toronto] = "50 million"
-
-puts population
+p fav_colours

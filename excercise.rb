@@ -83,66 +83,80 @@ family = {aman:36,kavita:24,preeti:28,omeet:21}
 # fav_colours.insert(4, "black","red")
 #
 # p fav_colours
+#
+# movie_list = {
+#   1999 => ["The Matrix","Star Wars:Episode 1","The Mummy"],
+#   2009 => ["Avatar","Star Trek","District 9"],
+#   2019 => ["How to Train Your Dragon 3","Toy Story 4","Star Wars:Episode 9"]
+# }
+# phone = [
+#   [1,2,3],
+#   [4,5,6],
+#   [7,8,9],
+#   ["*",0,"#"]
+# ]
+#
+# countries = [
+#   {
+#     name: "New Zealand",
+#     continent: "Australia",
+#     is_island: true
+#   },
+#   {
+#     name: "Canada",
+#     continent: "North America",
+#     is_island: false
+#   },
+#   {
+#     name: "India",
+#     continent: "Asia",
+#     is_island: false
+#   }
+# ]
+#
+#
+# 20.times do
+#   puts "I will not skateboard in the halls."
+# end
+#
+# str = "I will not skateboard in the halls"
+# a = []
+#
+# 20.times { a << str}
+# puts a
+#
+# new_list=*(1..50)
+# p new_list
+#
+# new_list.each { |num|
+#   num += 1
+#   puts num
+# }
+#
+# new_list3=*(1..50)
+# new_list3 = new_list3 * 3
+# p new_list3.sort
+#
+# countries_not_island = ["India", "Canada"]
+# p countries_not_island
+#
+# countries_not_island_og = countries.select do |country|
+#
+#   country[:is_island] == false
+#
+# end
+# puts countries_not_island_og
 
-movie_list = {
-  1999 => ["The Matrix","Star Wars:Episode 1","The Mummy"],
-  2009 => ["Avatar","Star Trek","District 9"],
-  2019 => ["How to Train Your Dragon 3","Toy Story 4","Star Wars:Episode 9"]
-}
-phone = [
-  [1,2,3],
-  [4,5,6],
-  [7,8,9],
-  ["*",0,"#"]
-]
+list_exp = [250, 7.95, 30.95, 16.50]
+list_exp1 = [2, 3.5, 2.6, 5 , 6.8 ]
 
-countries = [
-  {
-    name: "New Zealand",
-    continent: "Australia",
-    is_island: true
-  },
-  {
-    name: "Canada",
-    continent: "North America",
-    is_island: false
-  },
-  {
-    name: "India",
-    continent: "Asia",
-    is_island: false
+def list_expenses(expenses)
+sum = 0
+  expenses.each {|num|
+   sum += num
   }
-]
-
-
-20.times do
-  puts "I will not skateboard in the halls."
+  return sum
 end
 
-str = "I will not skateboard in the halls"
-a = []
-
-20.times { a << str}
-puts a
-
-new_list=*(1..50)
-p new_list
-
-new_list.each { |num|
-  num += 1
-  puts num
-}
-
-new_list3=*(1..50)
-new_list3 = new_list3 * 3
-p new_list3.sort
-
-countries_not_island = ["India", "Canada"]
-p countries_not_island
-
-countries_not_island_og = countries.select do |country|
-
-  country[:is_island] == false
-
-end
-puts countries_not_island_og
+puts list_expenses(list_exp)
+puts list_expenses(list_exp1)

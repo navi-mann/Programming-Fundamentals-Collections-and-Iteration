@@ -10,7 +10,7 @@ movie_info = { pulp_fiction:"1994",aladdin:"1992",mission_impossible:"1996"}
 
 population = {London:"8.7 million", Toronto:"2.8 million", Bombay: "20.7 million"}
 
-names = {aman:36,preeti:28,kavita:24,omeet:21}
+family = {aman:36,kavita:24,preeti:28,omeet:21}
 #
 # puts coin_flip
 # puts
@@ -22,14 +22,28 @@ names = {aman:36,preeti:28,kavita:24,omeet:21}
 # puts age
 # puts
 # puts "#{movie_info[:aladdin]}"
+#
+# puts fav_colours[-1]
+#
+# population[:new_york] = "8.5 million"
+# puts population
+#
+# puts coin_flip.reverse
+#
+# performing_artists.each do |performing_artists|
+#   puts "I think #{performing_artists} is great!"
+# end
 
-puts fav_colours[-1]
+puts performing_artists[0..1]
 
-population[:new_york] = "8.5 million"
-puts population
-
-puts coin_flip.reverse
-
-performing_artists.each do |performing_artists|
-  puts "I think #{performing_artists} is great!"
+movie_info.each do |movie_info, date|
+  puts "#{movie_info} came out in #{date}"
 end
+
+family_reverse = p family.sort_by {|name, age| age }
+
+p family_reverse.reverse
+
+movie_info[:Beauty_and_the_Beast] = ["1991",  "2017"]
+
+puts movie_info

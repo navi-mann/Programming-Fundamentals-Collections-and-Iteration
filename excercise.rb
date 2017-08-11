@@ -66,20 +66,83 @@ family = {aman:36,kavita:24,preeti:28,omeet:21}
 #
 # puts population
 
-puts population.values.reduce(:+)
+# puts population.values.reduce(:+)
+#
+# family.each { |name,age|
+#   puts "#{name} is old" if age == family.values.max
+#     puts "#{name} is young" if age == family.values.min
+# }
+#
+# puts fav_colours[-2..-1]
+#
+# family.each { |name,age|
+#    family[name] += 1
+# }
+# p family
+#
+# fav_colours.insert(4, "black","red")
+#
+# p fav_colours
 
-family.each { |name,age|
-  puts "#{name} is old" if age == family.values.max
-    puts "#{name} is young" if age == family.values.min
+movie_list = {
+  1999 => ["The Matrix","Star Wars:Episode 1","The Mummy"],
+  2009 => ["Avatar","Star Trek","District 9"],
+  2019 => ["How to Train Your Dragon 3","Toy Story 4","Star Wars:Episode 9"]
+}
+phone = [
+  [1,2,3],
+  [4,5,6],
+  [7,8,9],
+  ["*",0,"#"]
+]
+
+countries = [
+  {
+    name: "New Zealand",
+    continent: "Australia",
+    is_island: true
+  },
+  {
+    name: "Canada",
+    continent: "North America",
+    is_island: false
+  },
+  {
+    name: "India",
+    continent: "Asia",
+    is_island: false
+  }
+]
+
+
+20.times do
+  puts "I will not skateboard in the halls."
+end
+
+str = "I will not skateboard in the halls"
+a = []
+
+20.times { a << str}
+puts a
+
+new_list=*(1..50)
+p new_list
+
+new_list.each { |num|
+  num += 1
+  puts num
 }
 
-puts fav_colours[-2..-1]
+new_list3=*(1..50)
+new_list3 = new_list3 * 3
+p new_list3.sort
 
-family.each { |name,age|
-   family[name] += 1
-}
-p family
+countries_not_island = ["India", "Canada"]
+p countries_not_island
 
-fav_colours.insert(4, "black","red")
+countries_not_island_og = countries.select do |country|
 
-p fav_colours
+  country[:is_island] == false
+
+end
+puts countries_not_island_og

@@ -34,16 +34,34 @@ family = {aman:36,kavita:24,preeti:28,omeet:21}
 #   puts "I think #{performing_artists} is great!"
 # end
 
-puts performing_artists[0..1]
+# puts performing_artists[0..1]
+#
+# movie_info.each do |movie_info, date|
+#   puts "#{movie_info} came out in #{date}"
+# end
+#
+# family_reverse = p family.sort_by {|name, age| age }
+#
+# p family_reverse.reverse
+#
+# movie_info[:Beauty_and_the_Beast] = ["1991",  "2017"]
+#
+# puts movie_info
 
-movie_info.each do |movie_info, date|
-  puts "#{movie_info} came out in #{date}"
+family.each do |name,age|
+  p "#{name if age < 30}"
 end
 
-family_reverse = p family.sort_by {|name, age| age }
+family.each { |name,age|
+  puts name if age == family.values.max
+}
 
-p family_reverse.reverse
+puts coin_flip.count("heads")
 
-movie_info[:Beauty_and_the_Beast] = ["1991",  "2017"]
+performing_artists.delete("Adele")
 
-puts movie_info
+puts performing_artists
+
+population[:Toronto] = "50 million"
+
+puts population

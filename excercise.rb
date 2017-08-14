@@ -147,16 +147,44 @@ family = {aman:36,kavita:24,preeti:28,omeet:21}
 # end
 # puts countries_not_island_og
 
-list_exp = [250, 7.95, 30.95, 16.50]
-list_exp1 = [2, 3.5, 2.6, 5 , 6.8 ]
+# list_exp = [250, 7.95, 30.95, 16.50]
+# list_exp1 = [2, 3.5, 2.6, 5 , 6.8 ]
+#
+# def list_expenses(expenses)
+# sum = 0
+#   expenses.each {|num|
+#    sum += num
+#   }
+#   return sum
+# end
+#
+# puts list_expenses(list_exp)
+# puts list_expenses(list_exp1)
 
-def list_expenses(expenses)
-sum = 0
-  expenses.each {|num|
-   sum += num
-  }
-  return sum
+grocery_list = ["carrots","toilet paper", "apples", "salmon"]
+
+def print_list(food_list)
+  food_list.each do |name|
+  puts "*" + name
+  end
 end
 
-puts list_expenses(list_exp)
-puts list_expenses(list_exp1)
+grocery_list << "rice"
+print_list(grocery_list)
+
+puts grocery_list.length
+
+puts grocery_list.include?("bananas")
+
+if grocery_list.include?("bananas")
+  puts "You don't need to pick up bananas"
+else
+  puts "you need to pick up bananas."
+end
+
+puts grocery_list[1]
+
+print_list(grocery_list.sort)
+p "-------"
+grocery_list.delete "salmon"
+print_list(grocery_list)
